@@ -1,0 +1,18 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+  
+   <div class="New-art">
+      <a href="/">Back</a>
+      <form action="/edit/article/<%= art._id %>" method="post">
+      <label for="title">title:</label>
+      <textarea name="title"><%= art.title %></textarea>
+      <label for="txt">Article:</label>
+      <textarea name="txt"> <%= art.text %></textarea>
+      <button>Edit article</button>
+      </form>
+    </div>
+</body>
+</html>

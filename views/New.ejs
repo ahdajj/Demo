@@ -1,0 +1,19 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="New-art">
+    <h2>New Artikle</h2>
+    <a href="/">Back</a>
+    <form action="/new/article" method="post">
+        <label for="title">title</label>
+        <input type="text" name="title">
+        <label for="txt">Article</label>
+        <textarea name="txt"></textarea>
+        <button>Add article</button>
+    </form>
+   
+</body>
+</html>

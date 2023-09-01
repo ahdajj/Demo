@@ -1,0 +1,26 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="arts">
+   
+   <a href="/new/article">Add new article</a>
+
+   <div>
+    
+     <% if (post.length > 0) { %>
+       <% post.forEach(art => { %>
+        <a  href="/article/<%= art._id %>">
+         <h5 ><%= art.title %>   <%=art.created_at%> </h5>
+         <p ><%= art.text %></p>
+        </a>
+       <% }) %>
+     <% } else { %>
+        <p>There are no aricles to display...</p>
+     <% } %>
+  
+   </div>
+</body>
+</html>
